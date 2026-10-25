@@ -1,0 +1,28 @@
+{
+  "purpose": "Local protected-file and edit-boundary verification, not release approval",
+  "editable_file": "src/ap_week09/traversal.py",
+  "protected_files": {
+    ".gitattributes": "ee9fe366bc6afe5f7b358b070907b5cdc0fcc91b9bdab8f7319c53fe205d1070",
+    ".gitignore": "9f889b7e1560a79530dc17f367368399d811cf7cd36c133e80c729b1b4ba47f6",
+    "README.md": "17dd69b634c69a84ec6842ae32973b35f88ddfe03ab451e354fb854deedb4eee",
+    "docs/week_09_reading.pdf": "ffda3646780cc9a189dc5ad850fadea10681121ab2512c35cef2ba28d4ee472a",
+    "examples/compare_traversals.py": "fad7000dc95c8fbd2721412468e12eed5309fab27fc05e9916b8ccb2ba14310d",
+    "examples/inspect_graph.py": "a1909a6dd27d1a6d003eb56839dd6df642b8ab833cef8066bfff45aa673bdf62",
+    "examples/run_robot_path.py": "9d9ccafd0d5b48047526638a7a8b5fbbc9f174d3ea2cf3ee8a50b11bc8142d84",
+    "pyproject.toml": "0e3838eaf08dbacc6040e614717e2e27196b3896c4dd27627925a1d8c37ed8a4",
+    "scripts/verify_environment.py": "0c00d1cb57ba5dd148ed1f56194821be21107150c67a276dc7972aa37ab53aca",
+    "scripts/verify_submission.py": "0234d5f955a1120972146f6e7eef9312a79466e462fac1b680bdfa9644cfe634",
+    "src/ap_week09/__init__.py": "e80c9eba8cee6425a4968d0d5c5460981d4109462798453a64bf14571a12cd5d",
+    "src/ap_week09/__main__.py": "5fc8ec8980acfc22434a5305a54bcc0f6311e68c87733869c6ed364b9f8271bf",
+    "src/ap_week09/cases.py": "6b1ff887dcf224a58eda352b80d700d497d0b0ff2b5e06a7892d92d38d517e81",
+    "src/ap_week09/robot_scene.py": "6eeb4df2f27a48557d74c06a151a6b11e5a7c782ae2f6c538557c14a07990b5a",
+    "src/ap_week09/robotposes.py": "68e1a8334bf8d314e602bcb413a2fcee46241334986270ae306d61a912957d05",
+    "src/ap_week09/simulation.py": "8c08c1f93349d725240c3b79f2e4f61145bd5ecc758d31c5c89cddc742bd867e",
+    "src/ap_week09/validation.py": "f5d1ec1068a734ec5220c1e5a9cbdadc5cb9e81c0b5bedc6c814b56d2e0d519c",
+    "src/ap_week09/workflow.py": "b418663251f9c98fb6d8479d6a100a51a44ee97121944568116aee4fee26e695",
+    "tests/test_bfs.py": "c1fc0805f99c2b0f2aa6233fa9253b5a9e53460eac4b4b53458aa8b0b184691e",
+    "tests/test_dfs.py": "c4eae944739ea844d65e93dea28fe41eabc11d9bdbce9146f989a7b4abedc2b5",
+    "tests/test_reconstruct.py": "55157b3f7f4331a05660cfc5de5829d015d0f95616c250b3d707f00dea0a7344"
+  },
+  "traversal_outside_regions_sha256": "c49171b720bbffab854b687c2eda4509056b12ea19daddbada80b701c0305245"
+}
