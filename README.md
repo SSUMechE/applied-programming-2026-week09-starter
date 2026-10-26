@@ -47,14 +47,20 @@ git remote -v
 ```
 
 Both origin addresses must identify your own private Week 9 repository.
-From this repository root, use the existing `applied-programming-cuda` environment
-for **all** Week 9 examples, tests and GPU runs. Add pytest for the supplied tests.
-Keep the installed PyTorch, CUDA, Genesis and NumPy unchanged.
+From this repository root, reuse `applied-programming-cuda`, the environment
+created by the earlier **all-in-one CUDA/Genesis setup command**, for **all**
+Week 9 examples, tests and GPU runs. Do not create a Week 9 environment or switch
+to `applied-programming-w06`.
+
+The commands below update that existing environment for Week 9: ensure the build
+tool is available, add the supplied test runner and register this checkout.
+Already-suitable versions are kept. Keep the installed PyTorch, CUDA, Genesis
+and NumPy unchanged.
 
 ```bat
 set PYTHONUTF8=1
 conda activate applied-programming-cuda
-python -m pip install pytest==9.1.1
+python -m pip install "setuptools>=80.9.0" pytest==9.1.1
 python -m pip install -e . --no-deps --no-build-isolation
 python scripts/verify_environment.py
 ```
@@ -62,10 +68,15 @@ python scripts/verify_environment.py
 Expect `ENVIRONMENT PASS` after the active environment, required package versions,
 this package's source location and a small CUDA calculation pass. This check does
 not call unfinished TODOs or establish algorithm correctness. The editable install
-registers this repository without installing dependencies or replacing build tools.
+registers this repository without installing dependencies. The preceding command
+adds pytest and supplies setuptools only if its minimum requirement is not met.
+It does not reinstall the CUDA/Genesis environment.
 
-If CUDA setup is missing, complete the
-[Week 5 CUDA guide](https://github.com/SSUMechE/applied-programming-2026-week05-starter/releases/tag/week05-v2-cuda-guide-v7).
+If `applied-programming-cuda` does not exist, use the previously distributed
+[all-in-one setup command (INSTALL_COMMAND.txt)](https://github.com/SSUMechE/applied-programming-2026-week05-starter/releases/download/cuda-setup-v12-20261012/INSTALL_COMMAND.txt)
+in Anaconda Prompt, then return to this repository and run the commands above.
+Use the normal command, not the administrator/security-policy variant.
+If the environment already exists, do not rerun the installer for Week 9.
 If a version or import check fails, report the message rather than independently
 replacing PyTorch, the driver or CUDA Toolkit. Do not create another environment.
 In a new Anaconda Prompt, return to this repository, set `PYTHONUTF8=1` and

@@ -18,8 +18,10 @@ def fail(messages):
     print("ENVIRONMENT FAIL")
     print("\n".join(messages))
     print("Use Anaconda Prompt, activate applied-programming-cuda and return to this repository.")
-    print("Follow the Reading setup for pytest and this editable checkout only.")
-    print("Do not replace PyTorch, Genesis, NumPy, setuptools or the driver to fix this check.")
+    print("Follow README section 2 to add missing Week 9 build/test support and register this checkout.")
+    print('python -m pip install "setuptools>=80.9.0" pytest==9.1.1')
+    print("python -m pip install -e . --no-deps --no-build-isolation")
+    print("Do not replace PyTorch, Genesis, NumPy or the driver to fix this check.")
     print("If the existing CUDA setup differs or fails, stop and ask the instructor with this output.")
     return 1
 
@@ -43,7 +45,7 @@ def main():
         from packaging.version import Version
         actual = version("setuptools")
         if Version(actual) < Version("80.9.0"):
-            failures.append(f"setuptools must already be at least 80.9.0, found {actual}")
+            failures.append(f"setuptools requires at least 80.9.0, found {actual}")
     except Exception as error:
         failures.append(f"setuptools build support: {error}")
     for name in ("pytest", "numpy", "ap_week09"):
