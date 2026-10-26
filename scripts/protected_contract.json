@@ -4,8 +4,8 @@
   "protected_files": {
     ".gitattributes": "ee9fe366bc6afe5f7b358b070907b5cdc0fcc91b9bdab8f7319c53fe205d1070",
     ".gitignore": "9f889b7e1560a79530dc17f367368399d811cf7cd36c133e80c729b1b4ba47f6",
-    "README.md": "2ceb67855229c108cb007a0402a0fa07350af973f59d1508a4055bebfeb7a55c",
-    "docs/week_09_reading.pdf": "ef30199b412509dbd24499c5f7eebe20d2b4ce1a316a9895ad06cd584fb499a3",
+    "README.md": "c5d51fc82944d069457d82db24cd127434cd51db37025c0b388c7b75feee29ad",
+    "docs/week09_reading_v7.pdf": "ef30199b412509dbd24499c5f7eebe20d2b4ce1a316a9895ad06cd584fb499a3",
     "examples/compare_traversals.py": "fad7000dc95c8fbd2721412468e12eed5309fab27fc05e9916b8ccb2ba14310d",
     "examples/inspect_graph.py": "a1909a6dd27d1a6d003eb56839dd6df642b8ab833cef8066bfff45aa673bdf62",
     "examples/run_robot_path.py": "9a110e784a45196f6dbf8dce444d3b1352641ee8978f3fb7a1e994184e207116",

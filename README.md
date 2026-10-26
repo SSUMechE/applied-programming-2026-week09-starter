@@ -1,6 +1,6 @@
 # Week 9: Tree and Graph Data Structures and Traversal Algorithms
 
-Read the [Week 9 Reading](docs/week_09_reading.pdf), including its final
+Read the [Week 9 Reading V7](docs/week09_reading_v7.pdf), including its final
 Assignment section. It is the complete task specification. This page gives the
 commands and file locations needed to carry it out.
 
