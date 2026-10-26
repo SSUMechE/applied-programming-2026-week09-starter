@@ -47,19 +47,29 @@ git remote -v
 ```
 
 Both origin addresses must identify your own private Week 9 repository.
-From this repository root, reuse the environment prepared in Week 6:
+From this repository root, use the existing `applied-programming-cuda` environment
+for **all** Week 9 examples, tests and GPU runs. Add pytest for the supplied tests.
+Keep the installed PyTorch, CUDA, Genesis and NumPy unchanged.
 
 ```bat
 set PYTHONUTF8=1
-conda activate applied-programming-w06
-python -m pip install -e . --no-build-isolation
+conda activate applied-programming-cuda
+python -m pip install pytest==9.1.1
+python -m pip install -e . --no-deps --no-build-isolation
 python scripts/verify_environment.py
 ```
 
-Expect `ENVIRONMENT PASS` for the existing versions and this package's source
-location, not algorithm correctness. Do not create another environment or
-upgrade or downgrade packages. On another Prompt, return to this repository,
-set `PYTHONUTF8=1` and activate the same environment.
+Expect `ENVIRONMENT PASS` after the active environment, required package versions,
+this package's source location and a small CUDA calculation pass. This check does
+not call unfinished TODOs or establish algorithm correctness. The editable install
+registers this repository without installing dependencies or replacing build tools.
+
+If CUDA setup is missing, complete the
+[Week 5 CUDA guide](https://github.com/SSUMechE/applied-programming-2026-week05-starter/releases/tag/week05-v2-cuda-guide-v7).
+If a version or import check fails, report the message rather than independently
+replacing PyTorch, the driver or CUDA Toolkit. Do not create another environment.
+In a new Anaconda Prompt, return to this repository, set `PYTHONUTF8=1` and
+activate `applied-programming-cuda` again.
 
 ## 3. Inspect supplied input and complete the algorithms
 
@@ -131,18 +141,11 @@ Dead ends H, J, K and L occur in the visitation order, not the recovered path to
 
 ## 5. Execute the returned path with the supplied robot arm
 
-GPU robot execution is required. Reuse `applied-programming-cuda` from the
-[Week 5 CUDA guide (V7 release page)](https://github.com/SSUMechE/applied-programming-2026-week05-starter/releases/tag/week05-v2-cuda-guide-v7).
-Complete any missing setup using that guide. Do not create a different
-environment, install simulation dependencies into `applied-programming-w06`,
-or count a CPU-only run as completion.
-
-From the same repository root in Anaconda Prompt, execute your two original Assignment-graph
-paths with the supplied runner:
+GPU robot execution is required. Stay in the same repository and
+`applied-programming-cuda` environment. No further installation or environment
+switch is needed. Execute the two original Assignment-graph paths:
 
 ```bat
-conda activate applied-programming-cuda
-python -m pip install -e . --no-deps --no-build-isolation
 python examples/run_robot_path.py --algorithm bfs --output artifacts/bfs --capture
 python examples/run_robot_path.py --algorithm dfs --output artifacts/dfs --capture
 ```
@@ -152,17 +155,11 @@ S-A-E-C-F-D-G. Open the PNG images in `artifacts/bfs` and `artifacts/dfs` to com
 the reached postures. Generated images and records are inspection support,
 not submission items. A successful run does not prove shortest physical motion
 or continuous collision avoidance. Import/CUDA/setup failures are separate
-from a wrong algorithm result.
+from a wrong algorithm result. A CPU-only run does not satisfy this required GPU step.
 
 Optional setup diagnosis, not a required or graded step:
 `python examples/run_robot_path.py --algorithm provided --capture` runs the
 supplied preview without your algorithms and saves it in `artifacts/robot_path`.
-
-Return to the core environment for any further algorithm checks:
-
-```bat
-conda activate applied-programming-w06
-```
 
 ## 6. Push and submit
 
