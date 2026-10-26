@@ -151,8 +151,12 @@ python examples/run_robot_path.py --algorithm dfs --output artifacts/dfs --captu
 ```
 
 Expect `Result: EXECUTED` for both runs. BFS follows S-B-G and DFS follows
-S-A-E-C-F-D-G. Open the PNG images in `artifacts/bfs` and `artifacts/dfs` to compare
-the reached postures. Generated images and records are inspection support,
+S-A-E-C-F-D-G. After each successful capture, the saved node images open together
+in your browser in path order. This is a static image overview, not an animation.
+If the browser does not open, double-click `preview.html` in `artifacts/bfs` or
+`artifacts/dfs`. The original PNG images remain in those folders. Add `--no-open`
+only when you want to save the images without opening a window.
+Generated images and records are inspection support,
 not submission items. A successful run does not prove shortest physical motion
 or continuous collision avoidance. Import/CUDA/setup failures are separate
 from a wrong algorithm result. A CPU-only run does not satisfy this required GPU step.
